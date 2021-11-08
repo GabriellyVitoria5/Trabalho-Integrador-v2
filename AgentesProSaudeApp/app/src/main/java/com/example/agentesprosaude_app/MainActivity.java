@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         //autenticaUsuario(cpfTxt.getText().toString(), Integer.parseInt(senhaTxt.getText().toString()));
     }
 
-    private void autenticaUsuario(String cpf, int senha){
+    private boolean autenticaUsuario(String cpf, int senha){
 
         EventosDB db = new EventosDB(MainActivity.this);
         db.insereAgente();
@@ -45,11 +45,13 @@ public class MainActivity extends AppCompatActivity {
         boolean resultado = db.buscaAgente(cpf, senha);
 
         if(resultado == true){
-            eventos();
+            return true;
         }
         else{
             Toast.makeText(MainActivity.this, "Falha ao logar", Toast.LENGTH_LONG).show();
         }
+
+        return false;
 
     }
 
@@ -58,9 +60,13 @@ public class MainActivity extends AppCompatActivity {
         confirmar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent trocarAct = new Intent(MainActivity.this, EscolhaQuestionario.class);
-                trocarAct.putExtra("acao", 0);
-                startActivity(trocarAct);
+
+                if(autenticaUsuario(cpfTxt.getText().toString(), Integer.parseInt(senhaTxt.getText().toString())) == true){
+                    Intent trocarAct = new Intent(MainActivity.this, EscolhaQuestionario.class);
+                    trocarAct.putExtra("acao", 0);
+                    startActivity(trocarAct);
+                }
+
             }
         });
 
