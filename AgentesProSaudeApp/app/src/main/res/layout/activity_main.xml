@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- ocoupar toda a tela -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cinzaClaro"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="62dp">
+
+        <!-- título do app -->
+        <TextView
+            android:id="@+id/titulo1Txt"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="@color/corPrincipal"
+            android:paddingTop="15sp"
+            android:paddingBottom="15sp"
+            android:text="AgentesPróSaúde"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="35sp"></TextView>
+
+        <!-- barra -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@color/cinzaEscuro">
+        </View>
+
+        <!-- texto de login -->
+        <TextView
+            android:id="@+id/textoDeLoginTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/custom_textview"
+            android:paddingLeft="20sp"
+            android:paddingTop="5sp"
+            android:paddingRight="20sp"
+            android:paddingBottom="5sp"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="25sp"></TextView>
+
+        <!-- entrada simetrica -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical">
+
+            <!-- CPF -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/cpfTxt"
+                    android:layout_width="210sp"
+                    android:layout_height="48sp"
+                    android:background="@drawable/custom_edit"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:hint="CPF"
+                    android:textSize="25sp"></EditText>
+
+            </LinearLayout>
+
+            <!-- Senha -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/senhaTxt"
+                    android:layout_width="210sp"
+                    android:layout_height="48sp"
+                    android:background="@drawable/custom_edit"
+                    android:inputType="numberPassword"
+                    android:paddingLeft="10dp"
+                    android:hint="Senha"
+                    android:textSize="25sp"></EditText>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirmarBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_buttom"
+            android:backgroundTint="@color/corPrincipal"
+            android:text="Confirmar"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cinzaClaro">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AgentesPróSaúde"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:background="@color/corPrincipal"
+        android:padding="28dp">
+    </TextView>
+
+    <!-- barra -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/cinzaEscuro">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp">
+
+        <!-- o certo seria pegar o nome do agente no banco de dados de acordo com o cpf usado para login-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Agente1 conectado(a)"
+            android:textSize="20dp"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <!-- usuário volta para a tela de login (MainActivity ao clicar em qualquer parte especificada por este LinearLayout)
+    o método está na activity EscolhaQuestionario-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:onClick="sair"
+        android:background="@color/white"
+        android:layout_marginRight="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_logout"
+            android:layout_marginStart="16dp">
+        </ImageView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sair"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:padding="12dp">
+        </TextView>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

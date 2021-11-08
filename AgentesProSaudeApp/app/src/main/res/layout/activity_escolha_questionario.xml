@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".EscolhaQuestionario">
+
+    <!-- ocupa a tela toda-->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/cinzaClaro">
+
+        <!-- barra de navegação e titulo -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- inclui a barra de ferramentas e o títilo que estão em outro layout-->
+            <include
+                layout="@layout/toolbar">
+            </include>
+
+        </LinearLayout>
+
+        <!-- scrollview para visualizar os questionários se mais forem criados e não couber na tela-->
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".EscolhaQuestionario"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:id="@+id/scrollView">
+
+            <!-- alinhar questionarios
+            os questionários serão criados pelo site que estamos implementando
+            e serão ser acessados pelo aplicativo
+            independente da escolha, por enquanto o botão levará para o mesmo questionário de exemplo feito-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/rgQuestionarios">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/custom_edit">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </RadioButton>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Exemplo questionário 1"
+                            android:textSize="20dp"
+                            android:textColor="@color/black"
+                            android:textAlignment="center">
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/custom_edit">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </RadioButton>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Exemplo questionário 2"
+                            android:textSize="20dp"
+                            android:textColor="@color/black"
+                            android:textAlignment="center">
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/custom_edit">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </RadioButton>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Exemplo questionário 3"
+                            android:textSize="20dp"
+                            android:textColor="@color/black"
+                            android:textAlignment="center">
+                        </TextView>
+
+                    </LinearLayout>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/confirmarBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_buttom"
+            android:backgroundTint="@color/corPrincipal"
+            android:text="Acessar"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+    <!-- aparece o drwaer layout main_nav_bar se o usuário clicar na imagem -->
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <!-- inclui outra layout -->
+        <include layout="@layout/main_nav_drawer"></include>
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

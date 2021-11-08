@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Questionario">
+
+    <!-- ocupa toda a tela -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cinzaClaro"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="130dp">
+
+        <!-- título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/corPrincipal"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp"
+            android:text="Questionário"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30dp">
+        </TextView>
+
+        <!-- barra -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@color/cinzaEscuro">
+        </View>
+
+        <!-- scrollview para ver todas as perguntas que não cabem na tela-->
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:context=".Questionario"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- inclui o layout onde todas as perguntas estão
+                elas foram colocadas em um layout separado pois o que vai mudar serão as perguntas de cada questionário criado no site-->
+                <include layout="@layout/content_perguntas"/>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- alinhar botões -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/enviarBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                android:textSize="15sp"
+                android:background="@drawable/custom_buttom"
+                android:backgroundTint="@color/corPrincipal"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp" />
+
+            <Button
+                android:id="@+id/voltarBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voltar"
+                android:textSize="15sp"
+                android:background="@drawable/custom_buttom"
+                android:backgroundTint="@color/corPrincipal"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- perguntas do questionário -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="550dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_gravity="center"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="15dp"
+    android:layout_weight="1"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <!-- data  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data:"
+            android:layout_weight="1"
+            android:paddingTop="20dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/dataTxt"
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:inputType="date"
+            android:textSize="15dp">
+        </EditText>
+
+    </LinearLayout>
+
+    <!-- vacinas em dia  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vacinas em dia:"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp">
+        </TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/vacinaRg">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vacinaSRb"
+                android:textSize="15dp"
+                android:text="Sim">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vacainaNRb"
+                android:textSize="15dp"
+                android:text="Não">
+            </RadioButton>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- exames preventivos em dia -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Exames preventivos em dia:"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp">
+        </TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/examePreventivoRg">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/examePreventivoSRb"
+                android:textSize="15dp"
+                android:text="Sim">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/examePreventivoNRb"
+                android:textSize="15dp"
+                android:text="Não">
+            </RadioButton>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- uso de medicação -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uso de medicação contínua:"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp">
+        </TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/medicacaoRg">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/medicacaoSRb"
+                android:textSize="15dp"
+                android:text="Sim">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/medicacaoNRb"
+                android:textSize="15dp"
+                android:text="Não">
+            </RadioButton>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- doença respiratoria  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Doença respiratória:"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp">
+        </TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/doencaRespRg">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/doencaRespSRb"
+                android:textSize="15dp"
+                android:text="Sim">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/doencaRespNRb"
+                android:textSize="15dp"
+                android:text="Não">
+            </RadioButton>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- doença cardíaca  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Doença cardíaca:"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp">
+        </TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/doencaCardRg">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/doencaCardSRb"
+                android:textSize="15dp"
+                android:text="Sim">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/doencaCardNRb"
+                android:textSize="15dp"
+                android:text="Não">
+            </RadioButton>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- outra doença  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Outra doença:"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="15sp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/outraDoencaTxt"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:inputType="text"
+            android:textSize="15dp">
+        </EditText>
+
+    </LinearLayout>
+
+    <!-- gestante -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gestante:"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp">
+        </TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/gestanteRg">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gestanteSRb"
+                android:textSize="15dp"
+                android:text="Sim">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gestanteNRb"
+                android:textSize="15dp"
+                android:text="Não">
+            </RadioButton>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- internado recentemente  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Internado(a) recentemente:"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp">
+        </TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/internadoRg">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/internadoSRb"
+                android:textSize="15dp"
+                android:text="Sim">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/internadoNRb"
+                android:textSize="15dp"
+                android:text="Não">
+            </RadioButton>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- acompanhamento medico  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acompanhamento médico em dia:"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp">
+        </TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/acompanhamentoMedRg">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/acompanhamentoMedSRb"
+                android:textSize="15dp"
+                android:text="Sim">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/acompanhamentoMedNRb"
+                android:textSize="15dp"
+                android:text="Não">
+            </RadioButton>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- informação adicional -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Informação adicional:"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="15sp"></TextView>
+
+        <EditText
+            android:id="@+id/consultaTxt"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:inputType="text"
+            android:textSize="15dp">
+        </EditText>
+
+    </LinearLayout>
+
+</LinearLayout>
