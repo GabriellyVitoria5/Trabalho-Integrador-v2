@@ -57,7 +57,7 @@ public class EventosDB extends SQLiteOpenHelper {
 
     public boolean buscaAgente(String cpf, int senha){
 
-        String sql = "SELECT * FROM agente WHERE cpf = " + cpf;
+        String sql = "SELECT * FROM agente WHERE cpf = " + cpf + " AND senha = " + senha;
 
         //executa a sql
         try(SQLiteDatabase db = this.getWritableDatabase()){
@@ -65,8 +65,8 @@ public class EventosDB extends SQLiteOpenHelper {
             //extrai as informações
             Cursor tupla = db.rawQuery(sql, null);
 
-            //if(tupla.moveToFirst())
-            while(tupla.moveToNext()){
+            //while(tupla.moveToNext())
+            if(tupla.moveToFirst()){
 
                 if(cpf.equals(tupla.getString(tupla.getColumnIndex("cpf")))){
                     if(senha == (tupla.getInt(tupla.getColumnIndex("senha")))){
@@ -76,8 +76,8 @@ public class EventosDB extends SQLiteOpenHelper {
 
             }
 
-            db.close();
-            tupla.close();
+            //db.close();
+            //tupla.close();
 
         }catch (SQLiteException ex){
             //mensagem de erro
@@ -88,4 +88,5 @@ public class EventosDB extends SQLiteOpenHelper {
         return false;
 
     }
+    
 }
