@@ -19,8 +19,10 @@ public class EventosDB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        //criar o sql da tabela
         final String criaTabela = "CREATE TABLE IF NOT EXISTS agente(nome TEXT, telefone TEXT, email TEXT, cpf TEXT PRIMARY KEY, senha INTEGER)";
 
+        //criar a tabela de fato no banco de dados local
         db.execSQL(criaTabela);
     }
 
@@ -57,7 +59,8 @@ public class EventosDB extends SQLiteOpenHelper {
 
     public boolean buscaAgente(String cpf, int senha){
 
-        String sql = "SELECT * FROM agente WHERE cpf = " + cpf + " AND senha = " + senha;
+        //criar o comando sql para procurar um agente com os dados informados
+        String sql = "SELECT * FROM agente WHERE cpf = " + "'" + cpf + "' AND senha = " + senha;
 
         //executa a sql
         try(SQLiteDatabase db = this.getWritableDatabase()){
@@ -65,9 +68,10 @@ public class EventosDB extends SQLiteOpenHelper {
             //extrai as informações
             Cursor tupla = db.rawQuery(sql, null);
 
-            //while(tupla.moveToNext())
-            if(tupla.moveToFirst()){
+            //if(tupla.moveToFirst())
+            while(tupla.moveToNext()){
 
+                //confirmar se o cpf e senha digitados são os mesmos que existem no banco
                 if(cpf.equals(tupla.getString(tupla.getColumnIndex("cpf")))){
                     if(senha == (tupla.getInt(tupla.getColumnIndex("senha")))){
                         return true;
@@ -88,5 +92,5 @@ public class EventosDB extends SQLiteOpenHelper {
         return false;
 
     }
-    
+
 }
