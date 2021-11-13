@@ -42,12 +42,14 @@ public class MainActivity extends AppCompatActivity {
         EventosDB db = new EventosDB(MainActivity.this);
         db.insereAgente();
 
+        //receber o return do método buscaAgente
         boolean resultado = db.buscaAgente(cpf, senha);
 
         if(resultado == true){
             return true;
         }
         else{
+            //mensagem de erro
             Toast.makeText(MainActivity.this, "Falha ao logar", Toast.LENGTH_LONG).show();
         }
 
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //quando o usuário clicar no botão o método autenticaUsuario será chamado
+                //ele verifica se a buscaAgente encontrou um agente com os dados correspondentes aos informados no campo de texto
                 if(autenticaUsuario(cpfTxt.getText().toString(), Integer.parseInt(senhaTxt.getText().toString())) == true){
                     Intent trocarAct = new Intent(MainActivity.this, EscolhaQuestionario.class);
                     trocarAct.putExtra("acao", 0);
